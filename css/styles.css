@@ -1350,6 +1350,7 @@ line-height: 1.1;
  }
  .subscribe-input {
     width: 264px;
+    margin-left: 0;
  }
  .footer-subscribe {
     margin-left: 108px;
