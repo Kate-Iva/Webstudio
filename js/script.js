@@ -1,3 +1,4 @@
+//menu desktop
 document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.header-menu-link');
     
@@ -82,4 +83,45 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+  });
+
+//Order servise
+document.addEventListener('DOMContentLoaded', () => {
+    const orderBtn = document.querySelector('.hero-btn');
+    const backdrop = document.querySelector('.backdrop');
+    const closeBtn = backdrop.querySelector('.close-btn');
+    const form = backdrop.querySelector('.form');
+    
+    orderBtn.addEventListener('click', () => {
+      backdrop.style.display = 'block';
+    });
+    
+    closeBtn.addEventListener('click', () => {
+      backdrop.style.display = 'none';
+    });
+    
+    backdrop.addEventListener('click', (e) => {
+      if (e.target === backdrop) {
+        backdrop.style.display = 'none';
+      }
+    });
+    // Обробка відправки форми
+    form.addEventListener('submit', (e) => {
+      e.preventDefault(); 
+      
+      const name = form.querySelector('#user-name').value;
+      const tel = form.querySelector('#user-tel').value;
+      const email = form.querySelector('#user-email').value;
+      const comment = form.querySelector('#user-comment').value;
+      const privacyAccepted = form.querySelector('#user-privacy').checked;
+      console.log('Name:', name);
+      console.log('Phone:', tel);
+      console.log('Email:', email);
+      console.log('Comment:', comment);
+      console.log('Privacy accepted:', privacyAccepted);
+      
+      backdrop.style.display = 'none';
+      
+      form.reset();
+    });
   });
