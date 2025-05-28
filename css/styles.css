@@ -220,7 +220,7 @@ box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
 .mob-logo span {
     color: #2e2f42; 
  }
-.header-menu-open-btn {
+.menu-open-btn {
     border: none;
     background-color: transparent;
 
@@ -249,6 +249,8 @@ box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
     min-width: 320px;
     height: 100vh;
    background-color: #FFFFFF;  
+
+   transition: opasity 0.3s ease;
 }
 .header-menu-wrap {
     margin: 0 auto;
